@@ -36,17 +36,6 @@ It allows users to browse movies, book tickets, and download e-tickets in PDF fo
 
 ---
 
-## Installation & Setup
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/Rishikashah2674/cinetime-movie-booking-system.git
-### 1. Clone the repository
-```bash
-git clone https://github.com/your-username/cinetime.git
-
----
-
 ## CineTime – Project Structure
 
 cinetime/
@@ -98,3 +87,15 @@ cinetime/
 ├── styles.css            # Main stylesheet
 │
 └── README.md             # Project documentation
+
+
+---
+
+## Installation & Setup
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/Rishikashah2674/cinetime-movie-booking-system.git
+### 1. Clone the repository
+```bash
+git clone https://github.com/your-username/cinetime.git
