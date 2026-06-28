@@ -1,101 +1,321 @@
-# CineTime – Movie Ticket Booking System
+# 🎬 CineTime - Movie Ticket Booking System
 
-CineTime is a web-based movie ticket booking system built using **PHP, MySQL, and TCPDF**.  
-It allows users to browse movies, book tickets, and download e-tickets in PDF format, while an admin manages movies and bookings.
+CineTime is a web-based movie ticket booking platform developed using **PHP, MySQL, and TCPDF**. The application provides a complete online movie booking experience where users can browse movies, select seats, make payments, and download digitally generated e-tickets.
 
----
-
-## Features
-
-### User Features
-- User registration and login system  
-- Browse available movies  
-- Book movie tickets  
-- View booking history  
-- Download e-ticket in PDF format  
-
-### Ticket System
-- Automatic ticket generation after booking  
-- PDF e-ticket using TCPDF  
-- Includes movie details, booking ID, and seat info  
-
-### Admin Features
-- Add, update, delete movies  
-- Manage bookings  
-- View user activity  
+The system is designed to simulate a real-world cinema booking platform with features such as user authentication, seat selection, payment integration, booking management, PDF ticket generation, and an admin dashboard for managing movies and bookings.
 
 ---
 
-## Tech Stack
+# 🚀 Features
 
-- Frontend: HTML, CSS, JavaScript, Bootstrap  
-- Backend: PHP  
-- Database: MySQL  
-- PDF Generation: TCPDF  
-- Server: XAMPP / Apache  
+## 👤 User Features
 
----
-
-## CineTime – Project Structure
-
-cinetime/
-│
-├── admin/                   # Admin dashboard panel
-│
-├── assets/                 # Static assets (images, media, etc.)
-├── css/                    # Stylesheets
-├── js/                     # JavaScript files
-├── scss/                  # SCSS source files
-├── lib/                   # External libraries / helpers
-│
-├── moives/                # Movie-related assets/data (rename to "movies")
-├── TCPDF/                 # PDF generation library (e-ticket system)
-│
-├── config.php            # Database configuration
-├── connection.php        # DB connection handler
-├── connect.php           # Alternate DB connection file
-├── config_razorpay.php   # Razorpay payment configuration
-│
-├── index.php             # Home page
-├── login.php             # User login
-├── register.php          # User registration
-├── logout.php            # Logout handler
-│
-├── booking.php           # Ticket booking system
-├── seat_selection.php    # Seat selection UI
-├── payment.php           # Payment page
-├── process_payment.php   # Payment processing logic
-│
-├── confirmation.php      # Booking confirmation page
-├── download_ticket.php   # PDF ticket download (TCPDF)
-│
-├── admin.php             # Admin dashboard
-├── admin_login.php       # Admin login system
-│
-├── wizard.php            # Movie booking wizard flow
-├── api_wizard.php        # API for wizard functionality
-├── chatbot.php           # Chatbot feature (extra feature)
-│
-├── contact.php           # Contact page
-├── about.php             # About page
-│
-├── database_setup.sql    # Database setup file
-├── cinema_upgrade.sql    # Updated DB schema
-│
-├── header.php            # Common header
-├── footer.php            # Common footer
-├── styles.css            # Main stylesheet
-│
-└── README.md             # Project documentation
-
+- User registration and login system
+- Browse available movies
+- View movie details and show information
+- Select seats using an interactive seat selection interface
+- Book movie tickets
+- Online payment integration using Razorpay
+- Booking confirmation system
+- Download PDF e-tickets
+- View booking details
 
 ---
 
-## Installation & Setup
+## 🧑‍💼 Admin Features
 
-### 1. Clone the repository
+- Secure admin login
+- Admin dashboard
+- Add, update, and delete movies
+- Manage movie listings
+- View user bookings
+- Monitor booking activities
+
+---
+
+## 🎟️ Ticket Management
+
+- Automatic ticket generation after successful booking
+- PDF ticket generation using TCPDF
+- Includes:
+  - Movie details
+  - Booking ID
+  - User information
+  - Seat details
+  - Payment information
+
+---
+
+## 🤖 Additional Features
+
+- Integrated chatbot functionality
+- Movie booking wizard flow
+- Dynamic movie management
+- Responsive user interface
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap
+- SCSS
+
+## Backend
+
+- PHP
+
+## Database
+
+- MySQL
+
+## Libraries & Tools
+
+- TCPDF (PDF Ticket Generation)
+- Razorpay Payment Gateway
+- XAMPP (Apache + MySQL)
+- Git & GitHub
+
+---
+
+# 📂 Project Structure
+
+```
+CineTime/
+│
+├── admin/                    # Admin dashboard and management features
+│
+├── assets/                   # Images and static resources
+│
+├── css/                      # CSS stylesheets
+│
+├── js/                       # JavaScript files
+│
+├── scss/                     # SCSS source files
+│
+├── lib/                      # Supporting libraries
+│
+├── TCPDF/                    # TCPDF library for PDF generation
+│
+├── moives/                   # Movie related assets
+│
+├── config.php                # Database configuration
+├── connection.php            # Database connection
+├── connect.php               # Database connectivity file
+├── config_razorpay.php       # Razorpay configuration
+│
+├── index.php                 # Home page
+├── login.php                 # User login
+├── register.php              # User registration
+├── logout.php                # Logout handler
+│
+├── booking.php               # Ticket booking page
+├── seat_selection.php        # Seat selection module
+├── payment.php               # Payment page
+├── process_payment.php       # Payment processing logic
+│
+├── confirmation.php           # Booking confirmation
+├── download_ticket.php        # PDF ticket download
+│
+├── admin.php                 # Admin panel
+├── admin_login.php           # Admin authentication
+│
+├── wizard.php                # Booking wizard
+├── api_wizard.php            # Wizard API handling
+│
+├── chatbot.php               # Chatbot module
+│
+├── database_setup.sql        # Database setup file
+├── cinema_upgrade.sql        # Updated database schema
+│
+├── header.php                # Common header component
+├── footer.php                # Common footer component
+│
+└── README.md                 # Project documentation
+```
+
+---
+
+# ⚙️ Installation & Setup
+
+Follow these steps to run CineTime locally.
+
+## 1. Clone the Repository
+
 ```bash
 git clone https://github.com/Rishikashah2674/cinetime-movie-booking-system.git
-### 1. Clone the repository
+```
+
+Navigate into the project folder:
+
 ```bash
-git clone https://github.com/your-username/cinetime.git
+cd cinetime
+```
+
+---
+
+## 2. Setup XAMPP Server
+
+1. Install and open XAMPP
+2. Start:
+   - Apache
+   - MySQL
+
+3. Move the project folder into:
+
+```
+xampp/htdocs/
+```
+
+Example:
+
+```
+xampp/htdocs/cinetime
+```
+
+---
+
+## 3. Setup Database
+
+1. Open phpMyAdmin:
+
+```
+http://localhost/phpmyadmin
+```
+
+2. Create a database:
+
+```
+cinetime
+```
+
+3. Import the database file:
+
+```
+database_setup.sql
+```
+
+or
+
+```
+cinema_upgrade.sql
+```
+
+---
+
+## 4. Configure Database Connection
+
+Open:
+
+```
+config.php
+```
+
+Update database credentials:
+
+```php
+$host = "localhost";
+$username = "root";
+$password = "";
+$database = "cinetime";
+```
+
+---
+
+## 5. Configure Razorpay Payment
+
+Open:
+
+```
+config_razorpay.php
+```
+
+Add your Razorpay API credentials:
+
+```
+RAZORPAY_KEY_ID
+RAZORPAY_SECRET_KEY
+```
+
+---
+
+## 6. Run the Application
+
+Open your browser:
+
+```
+http://localhost/cinetime
+```
+
+---
+
+# 🔄 Application Workflow
+
+1. User registers an account
+2. User logs into the system
+3. User browses available movies
+4. User selects movie and show details
+5. User selects available seats
+6. User completes payment
+7. Booking details are stored in MySQL database
+8. PDF e-ticket is generated
+9. User downloads the ticket
+
+---
+
+# 🗄️ Database Modules
+
+The database manages:
+
+- Users
+- Movies
+- Bookings
+- Seats
+- Payments
+- Admin records
+
+---
+
+# 🚀 Future Enhancements
+
+- Real-time seat availability
+- Email ticket delivery
+- Movie ratings and reviews
+- Online movie recommendations
+- Mobile application version
+- Advanced analytics dashboard
+
+---
+
+# 🎯 Learning Outcomes
+
+Through CineTime, the project demonstrates:
+
+- Full-stack PHP development
+- Database design and management
+- Authentication and session handling
+- CRUD operations
+- Payment gateway integration
+- PDF generation
+- Real-world booking system architecture
+
+---
+
+# 👨‍💻 Author
+
+**Your Name**
+
+GitHub:
+```
+https://github.com/Rishikashah2674
+```
+
+---
+
+# 📌 Disclaimer
+
+This project is developed for educational and portfolio purposes to demonstrate web development skills and implementation of a real-world movie booking system.
